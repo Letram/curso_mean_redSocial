@@ -17,13 +17,14 @@ app.use(bodyParser.json());
 
 //routes
 
-//HTTP GET
-
+//HTTP GET "/"
 app.get("/", (request, response) =>{
 	response.status(200).send({
 		message: "Hello World!"
 	});
 });
+
+//HTTP GET "/pruebas"
 app.get("/pruebas", (request, response) =>{
 	response.status(200).send({
 		message: "testing in nodeJS server"
