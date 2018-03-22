@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var app = express();
 
 //routes loader
-
+var userRoutes = require('./routes/user');
 //middlewares
 
 //required for body-parser. everytime we receive ant petition it is converted to a JSON object
@@ -17,18 +17,8 @@ app.use(bodyParser.json());
 
 //routes
 
-//HTTP GET "/"
-app.get("/", (request, response) =>{
-	response.status(200).send({
-		message: "Hello World!"
-	});
-});
+//now the url will be "/api" + userRoutes
+app.use("/api", userRoutes);
 
-//HTTP GET "/pruebas"
-app.get("/pruebas", (request, response) =>{
-	response.status(200).send({
-		message: "testing in nodeJS server"
-	});
-});
 //exports
 module.exports = app;

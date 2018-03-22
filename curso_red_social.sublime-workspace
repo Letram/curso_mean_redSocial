@@ -3,16 +3,52 @@
 	{
 		"selected_items":
 		[
+			[
+				"publication",
+				"publicationSchema"
+			],
+			[
+				"mono",
+				"mongoDB"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "api/package.json",
+			"file": "api/index.js",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
+				"buffer_size": 707,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/app.js",
+			"settings":
+			{
+				"buffer_size": 626,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/message.js",
+			"settings":
+			{
+				"buffer_size": 656,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/models/follow.js",
+			"settings":
+			{
+				"buffer_size": 637,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -23,18 +59,32 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 0.0,
-		"last_filter": "",
+		"height": 137.0,
+		"last_filter": "Package Control: inst",
 		"selected_items":
 		[
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 0.0
+		"width": 444.0
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 131.0,
 		"history":
 		[
+			"clear",
+			"node index.js"
 		]
 	},
 	"distraction_free":
@@ -49,10 +99,15 @@
 	"expanded_folders":
 	[
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial",
-		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api"
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/models"
 	],
 	"file_history":
 	[
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/models/follow.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/models/publication.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/models/user.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/package.json"
 	],
 	"find":
 	{
@@ -60,7 +115,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 105.0,
 		"where_history":
 		[
 		]
@@ -87,37 +142,119 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "api/package.json",
+					"file": "api/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 707,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								707,
+								707
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "api/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 626,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								626,
+								626
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 80.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "api/models/message.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 656,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								558,
+								558
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "api/models/follow.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 637,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								541,
+								541
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -129,7 +266,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 36.0
 	},
 	"layout":
 	{
@@ -154,9 +291,17 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 103.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.nodejs":
+	{
+		"height": 103.0
 	},
 	"pinned_build_system": "",
 	"project": "curso_red_social.sublime-project",
