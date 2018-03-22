@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"password",
+				"passwordHashed"
+			],
+			[
 				"publication",
 				"publicationSchema"
 			],
@@ -28,25 +32,25 @@
 			"file": "api/app.js",
 			"settings":
 			{
-				"buffer_size": 626,
+				"buffer_size": 481,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "api/models/message.js",
+			"file": "api/routes/user.js",
 			"settings":
 			{
-				"buffer_size": 656,
+				"buffer_size": 283,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "api/models/follow.js",
+			"file": "api/controllers/user.js",
 			"settings":
 			{
-				"buffer_size": 637,
+				"buffer_size": 1554,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -59,10 +63,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 137.0,
-		"last_filter": "Package Control: inst",
+		"height": 392.0,
+		"last_filter": "Package Control: ",
 		"selected_items":
 		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
 			[
 				"Package Control: inst",
 				"Package Control: Install Package"
@@ -100,11 +108,14 @@
 	[
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api",
-		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/models"
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/controllers",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/routes"
 	],
 	"file_history":
 	[
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/cotrollers/user.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/models/follow.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/models/message.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/models/publication.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/models/user.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/package.json"
@@ -142,7 +153,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -179,43 +190,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 626,
+						"buffer_size": 481,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								626,
-								626
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 80.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "api/models/message.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 656,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								558,
-								558
+								449,
+								449
 							]
 						],
 						"settings":
@@ -226,24 +209,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "api/models/follow.js",
+					"buffer": 2,
+					"file": "api/routes/user.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 637,
+						"buffer_size": 283,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								541,
-								541
+								260,
+								260
 							]
 						],
 						"settings":
@@ -255,6 +238,34 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "api/controllers/user.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1096,
+								1096
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -345,7 +356,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 253.0,
+	"side_bar_width": 182.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
