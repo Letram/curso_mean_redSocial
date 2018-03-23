@@ -3,7 +3,7 @@
 var bcrypt = require('bcrypt-nodejs');
 //capitalizaed so we know it is a model
 var User = require('../models/user');
-
+var jwt = require('../services/jwt');
 function home(request, response){
 	response.status(200).send({
 		message: "Hello World!"
@@ -77,9 +77,15 @@ function userLogin(request, response){
 			return response.status(500).send({message:"Error en la petición."});
 		if(user)
 			bcrypt.compare(userPassword, user.password, (error, check) => {
-				if(check)
-					//user login succesfully
-				return response.status(200).send({user});
+				if(check){
+					//if we want to receive our user params as a token we have to make the getToken variable true when sending the request
+					if(params.getToken){
+						return response.status(200).send({token: jwt.createToken(user)});
+					}else{
+						user.password = undefined;
+						return response.status(200).send({user});
+					}
+				}
 				else
 					return response.status(404).send({message:"El usuario no se ha podido identificar. ERROR EN EL COMPARE"});
 			});
