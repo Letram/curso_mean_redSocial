@@ -16,9 +16,8 @@ exports.createToken = function(user){
 		role: user.role,
 		image: user.image,
 		iat: moment().unix(),
-		exp: moment().add(30, 'days').unix
+		exp: moment().add(30, 'days').unix()
 	};
-
 	//in order to create a token we have to cypher the payload. we use jwt encode method to encrypt the payload with our secretPass
 	return jwt.encode(payload, secretPass)
 };

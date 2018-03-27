@@ -4,6 +4,7 @@ var bcrypt = require('bcrypt-nodejs');
 //capitalizaed so we know it is a model
 var User = require('../models/user');
 var jwt = require('../services/jwt');
+var mongoosePaginate = require('mongoose-pagination');
 function home(request, response){
 	response.status(200).send({
 		message: "Hello World!"
@@ -93,10 +94,51 @@ function userLogin(request, response){
 			return response.status(404).send({message:"El usuario no se ha podido identificar. ERROR EN EL FIND_ONE"});
 	});
 }
+
+function getUser(request, response){
+	//user id comes via url
+	var userID = request.params.id;
+
+	User.findById(userID, (error, user) =>{
+		if(error)return response.status(500).send({
+			message: "Error en la petición."
+		});
+		if(!user) return response.status(404).send({
+			message: "El usuario no existe."
+		});
+		return response.status(200).send(user);
+	})
+}
+
+function getUsers(req, res){
+	//id of the current logged user
+	var identity_userID = req.user.sub;
+	var page = 1;
+	if(req.params.page){
+		page = req.params.page;
+	}
+	var itemsPerPage = 5;
+
+	User.find().sort('_id').paginate(page, itemsPerPage, (err, users, total) => {
+		if(err)return response.status(500).send({
+			message: "Error en la petición."
+		});
+		if(!users)return response.status(404).send({
+			message: "No hay usuarios disponibles."
+		});
+		return res.status(200).send({
+			users,
+			total,
+			pages: Math.ceil(total/itemsPerPage)
+		});
+	});
+}
 //we are exporting "home" and "pruebas" functions so we can use them from other classes if we import this.
 module.exports = {
 	home,
 	pruebas,
 	saveUser,
-	userLogin
+	userLogin,
+	getUser,
+	getUsers
 }

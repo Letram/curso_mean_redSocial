@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"console",
+				"console.log"
+			],
+			[
 				"password",
 				"passwordHashed"
 			],
@@ -20,28 +24,10 @@
 	"buffers":
 	[
 		{
-			"file": "api/index.js",
-			"settings":
-			{
-				"buffer_size": 707,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "api/app.js",
-			"settings":
-			{
-				"buffer_size": 481,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "api/routes/user.js",
 			"settings":
 			{
-				"buffer_size": 329,
+				"buffer_size": 541,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -50,7 +36,7 @@
 			"file": "api/controllers/user.js",
 			"settings":
 			{
-				"buffer_size": 2791,
+				"buffer_size": 4076,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -109,10 +95,19 @@
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/controllers",
-		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/routes"
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/middlewares",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/routes",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/services"
 	],
 	"file_history":
 	[
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/index.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/app.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/services/jwt.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/middlewares/authenticate.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/node_modules/got/index.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/routes/user.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/controllers/user.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/cotrollers/user.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/models/follow.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/models/message.js",
@@ -154,80 +149,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "api/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 707,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								707,
-								707
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "api/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 481,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								449,
-								449
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "api/routes/user.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 329,
+						"buffer_size": 541,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								329,
-								329
+								517,
+								517
 							]
 						],
 						"settings":
@@ -242,28 +181,29 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 1,
 					"file": "api/controllers/user.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2791,
+						"buffer_size": 4076,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2238,
-								2238
+								223,
+								223
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 675.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
