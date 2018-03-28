@@ -133,6 +133,26 @@ function getUsers(req, res){
 		});
 	});
 }
+
+//update function to change any parameter of our user logged in. The password will NOT be allowed to change using this function.
+function updateUser(req, res){
+	var userId = req.params.id;
+	var update = req.body;
+
+	delete update.password;
+
+	if(userId != req.user.sub) return res.status(500).send({message: "No tienes permiso para hacer esta acción."});
+
+	User.findByIdAndUpdate(userId, update, {new:true}, (err, updatedUSer) => {
+		if(err)return res.status(500).send({
+			message: "Error en la petición."
+		});
+		if(!updatedUSer)return res.status(404).send({
+			message: "No se ha podido actualizar el usuario"
+		});
+		return res.status(200).send({updatedUSer});
+	});
+}
 //we are exporting "home" and "pruebas" functions so we can use them from other classes if we import this.
 module.exports = {
 	home,
@@ -140,5 +160,6 @@ module.exports = {
 	saveUser,
 	userLogin,
 	getUser,
-	getUsers
+	getUsers,
+	updateUser
 }
