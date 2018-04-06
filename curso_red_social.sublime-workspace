@@ -27,7 +27,7 @@
 			"file": "api/routes/user.js",
 			"settings":
 			{
-				"buffer_size": 541,
+				"buffer_size": 888,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -36,7 +36,7 @@
 			"file": "api/controllers/user.js",
 			"settings":
 			{
-				"buffer_size": 4076,
+				"buffer_size": 6289,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -97,7 +97,9 @@
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/controllers",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/middlewares",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/routes",
-		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/services"
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/services",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/uploads",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/uploads/users"
 	],
 	"file_history":
 	[
@@ -149,7 +151,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -158,15 +160,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 541,
+						"buffer_size": 888,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								517,
-								517
+								836,
+								836
 							]
 						],
 						"settings":
@@ -177,7 +179,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -186,15 +188,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4076,
+						"buffer_size": 6289,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								223,
-								223
+								6287,
+								6287
 							]
 						],
 						"settings":
@@ -203,10 +205,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2607.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

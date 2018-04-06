@@ -5,6 +5,9 @@ var bcrypt = require('bcrypt-nodejs');
 var User = require('../models/user');
 var jwt = require('../services/jwt');
 var mongoosePaginate = require('mongoose-pagination');
+var fs = require('fs');
+var path = require('path');
+
 function home(request, response){
 	response.status(200).send({
 		message: "Hello World!"
@@ -153,6 +156,56 @@ function updateUser(req, res){
 		return res.status(200).send({updatedUSer});
 	});
 }
+
+function uploadImage(req, res){
+	var userId = req.params.id;	
+
+	if(req.files){
+		var supportedExt = ['png', 'jpg', 'jpeg', 'gif'];
+		var filePath = req.files.image.path;
+		var fileSplit = filePath.split('\\');
+		var fileName = fileSplit[fileSplit.length -1];
+		var extSplit = fileName.split('\.');
+		var fileExt = extSplit[1];
+
+		if(userId != req.user.sub){
+			return removeFileFromUploads(res, filePath, "No tienes permiso para hacer esta acción.")
+		} 
+		
+		if(supportedExt.includes(fileExt)){
+			User.findByIdAndUpdate(userId, {image: fileName}, {new:true}, (err, updatedUser) => {
+				if(err)return res.status(500).send({
+					message: "Error en la petición."
+				});
+				if(!updatedUser)return res.status(404).send({
+					message: "No se ha podido actualizar el usuario"
+				});
+				return res.status(200).send({updatedUser});
+			});
+		}else{
+			return removeFileFromUploads(res, filePath, "Extensión no soportada.")
+		}
+
+	}else{
+		return res.status(200).send({message: "No se ha subido ninguna imagen."});
+	}
+}
+
+function removeFileFromUploads(res, filePath, message){
+	fs.unlink(filePath, (err) =>{
+		if(err)res.status(200).send({message: message});
+	});
+}
+
+function getImageFile(req, res){
+	var image_file = req.params.image_file;
+	var file_path = './uploads/users/' + image_file;
+
+	fs.exists(file_path, (exists) => {
+		if(exists)res.sendFile(path.resolve(file_path));
+		else res.status(200).send({message:"No existe la imagen."});
+	});
+}
 //we are exporting "home" and "pruebas" functions so we can use them from other classes if we import this.
 module.exports = {
 	home,
@@ -161,5 +214,7 @@ module.exports = {
 	userLogin,
 	getUser,
 	getUsers,
-	updateUser
+	updateUser,
+	uploadImage,
+	getImageFile
 }
