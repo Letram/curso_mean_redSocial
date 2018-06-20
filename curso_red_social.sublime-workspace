@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"follo",
+				"followRoutes"
+			],
+			[
 				"console",
 				"console.log"
 			],
@@ -28,6 +32,33 @@
 			"settings":
 			{
 				"buffer_size": 888,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/routes/follow.js",
+			"settings":
+			{
+				"buffer_size": 281,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/app.js",
+			"settings":
+			{
+				"buffer_size": 559,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/controllers/follow.js",
+			"settings":
+			{
+				"buffer_size": 282,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -95,11 +126,7 @@
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/controllers",
-		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/middlewares",
-		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/routes",
-		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/services",
-		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/uploads",
-		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/uploads/users"
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/middlewares"
 	],
 	"file_history":
 	[
@@ -133,6 +160,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"var user = require('../models/user');",
 			")\n"
 		],
 		"highlight": true,
@@ -151,7 +179,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -167,8 +195,8 @@
 						"selection":
 						[
 							[
-								836,
-								836
+								488,
+								554
 							]
 						],
 						"settings":
@@ -179,11 +207,96 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "api/routes/follow.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								258
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "api/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 559,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								527,
+								527
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "api/controllers/follow.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13,
+								13
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "api/controllers/user.js",
 					"semi_transient": false,
 					"settings":
@@ -205,10 +318,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2607.0,
+						"translation.y": 2577.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
