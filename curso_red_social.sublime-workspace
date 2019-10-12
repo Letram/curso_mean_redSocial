@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
+				"getCount",
+				"getCounterFollow"
+			],
+			[
 				"follo",
-				"followRoutes"
+				"following"
+			],
+			[
+				"follow",
+				"followUsersIds"
+			],
+			[
+				"follwo",
+				"follow"
+			],
+			[
+				"user_id",
+				"user_id"
 			],
 			[
 				"console",
@@ -28,46 +44,19 @@
 	"buffers":
 	[
 		{
-			"file": "api/routes/user.js",
-			"settings":
-			{
-				"buffer_size": 888,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "api/routes/follow.js",
-			"settings":
-			{
-				"buffer_size": 281,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "api/app.js",
-			"settings":
-			{
-				"buffer_size": 559,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "api/controllers/follow.js",
-			"settings":
-			{
-				"buffer_size": 282,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "api/controllers/user.js",
 			"settings":
 			{
-				"buffer_size": 6289,
+				"buffer_size": 8091,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/routes/user.js",
+			"settings":
+			{
+				"buffer_size": 963,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -126,16 +115,19 @@
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/controllers",
-		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/middlewares"
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/middlewares",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/routes"
 	],
 	"file_history":
 	[
-		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/index.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/controllers/follow.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/app.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/routes/user.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/routes/follow.js",
+		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/index.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/services/jwt.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/middlewares/authenticate.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/node_modules/got/index.js",
-		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/routes/user.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/controllers/user.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/cotrollers/user.js",
 		"/C/Users/Carlos-^C/Desktop/curso_mean_redSocial/api/models/follow.js",
@@ -184,27 +176,28 @@
 			[
 				{
 					"buffer": 0,
-					"file": "api/routes/user.js",
+					"file": "api/controllers/user.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 888,
+						"buffer_size": 8091,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								488,
-								554
+								8048,
+								8048
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3920.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -212,24 +205,23 @@
 				},
 				{
 					"buffer": 1,
-					"file": "api/routes/follow.js",
+					"file": "api/routes/user.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 281,
+						"buffer_size": 963,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								258,
-								258
+								699,
+								699
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
 							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -237,91 +229,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "api/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 559,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								527,
-								527
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "api/controllers/follow.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 282,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								13,
-								13
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "api/controllers/user.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6289,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6287,
-								6287
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2577.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
 					"type": "text"
 				}
 			]
