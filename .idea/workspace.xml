@@ -1,18 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c2f03c1-5460-4b34-b921-219a5bdd83b9" name="Default" comment="Publication controller done">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/controllers/message.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routes/message.js" afterDir="false" />
+    <list default="true" id="2c2f03c1-5460-4b34-b921-219a5bdd83b9" name="Default" comment="frontend started.">
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/assets/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/typings.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/controllers/publication.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/publication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/follow.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/follow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/publication.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/publication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/user.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -48,9 +70,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="ts.external.directory.path" value="C:\Cursos\curso_mean_redSocial\curso-red-social-front\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Cursos\curso_mean_redSocial\curso-red-social-front\src\assets" />
       <recent name="C:\Cursos\curso_mean_redSocial\api\controllers" />
       <recent name="C:\Cursos\curso_mean_redSocial\api\routes" />
     </key>
@@ -83,7 +107,8 @@
       <workItem from="1531400688962" duration="475000" />
       <workItem from="1532105650876" duration="832000" />
       <workItem from="1571061722290" duration="518000" />
-      <workItem from="1571122992058" duration="3484000" />
+      <workItem from="1571122992058" duration="3631000" />
+      <workItem from="1571135007612" duration="3655000" />
     </task>
     <task id="LOCAL-00001" summary="Publication controller done">
       <created>1571062219646</created>
@@ -92,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571062219646</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Message controller done. Backend seem to be done">
+      <created>1571127068148</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571127068148</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +146,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Publication controller done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Publication controller done" />
+    <MESSAGE value="Message controller done. Backend seem to be done" />
+    <MESSAGE value="frontend started." />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend started." />
   </component>
 </project>
