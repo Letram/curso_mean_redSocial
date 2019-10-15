@@ -1,7 +1,7 @@
 'use strict';
 var express = require("express");
 var PublicationController = require("../controllers/publication");
-var api = express.Router();
+var api = express.Router({});
 var md_auth = require('../middlewares/authenticate');
 
 var multipart = require("connect-multiparty");

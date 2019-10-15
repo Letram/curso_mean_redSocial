@@ -5,9 +5,9 @@ var fs = require("fs");
 var moment = require("moment");
 var mongoosePaginate = require("mongoose-pagination");
 
-var Publication = require("../../../curso_mean_redSocial-master/api/models/publication");
-var User = require("../../../curso_mean_redSocial-master/api/models/user");
-var Follow = require("../../../curso_mean_redSocial-master/api/models/follow");
+var Publication = require("../models/publication");
+var User = require("../models/user");
+var Follow = require("../models/follow");
 
 function createPublication(req, res){
     var params = req.body;

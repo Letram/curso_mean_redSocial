@@ -1,11 +1,11 @@
-'use strict'
+'use strict';
 
 var express = require('express');
 var userController = require('../controllers/user');
 var md_auth = require('../middlewares/authenticate');
 var multipart = require('connect-multiparty');
 var md_upload = multipart({uploadDir: './uploads/users'});
-var api = express.Router();
+var api = express.Router({});
 
 api.get('/home', userController.home);
 api.get('/pruebas', md_auth.ensureAuth, userController.pruebas);

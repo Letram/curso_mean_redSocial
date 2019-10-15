@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c2f03c1-5460-4b34-b921-219a5bdd83b9" name="Default" comment="Publication controller done">
-      <change afterPath="$PROJECT_DIR$/api/controllers/publication.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routes/publication.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/controllers/message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/routes/message.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/controllers/publication.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/publication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/follow.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/follow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/publication.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/publication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/user.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,14 +20,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="895" />
   </component>
   <component name="ProjectId" id="1SCJbdlsXjlLzgWBkCFRJI2VJfl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -32,9 +36,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
@@ -71,8 +82,17 @@
       <workItem from="1531314074970" duration="1306000" />
       <workItem from="1531400688962" duration="475000" />
       <workItem from="1532105650876" duration="832000" />
-      <workItem from="1571061722290" duration="489000" />
+      <workItem from="1571061722290" duration="518000" />
+      <workItem from="1571122992058" duration="3484000" />
     </task>
+    <task id="LOCAL-00001" summary="Publication controller done">
+      <created>1571062219646</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571062219646</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,7 +103,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

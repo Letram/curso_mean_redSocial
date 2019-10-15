@@ -1,6 +1,6 @@
 //creating model MESSAGE via mongoose since we are using mongoDB.
 
-'use strict'
+'use strict';
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
@@ -10,6 +10,7 @@ var Schema = mongoose.Schema;
 //emmiter and receiver are both objectId because they are pointing to the user that emitted the message and to the user wich will receive the message
 var messageSchema = Schema({
 	text: String,
+	viewed: String,
 	created_at:String,
 	emmiter: {type: Schema.ObjectId, ref:'User'},
 	receiver: {type: Schema.ObjectId, ref:'User'}

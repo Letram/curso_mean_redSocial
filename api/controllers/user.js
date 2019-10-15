@@ -1,8 +1,11 @@
-'use strict'
+'use strict';
 
 var bcrypt = require('bcrypt-nodejs');
 //capitalizaed so we know it is a model
 var User = require('../models/user');
+var Follow = require("../models/follow");
+var Publication = require("../models/publication");
+
 var jwt = require('../services/jwt');
 var mongoosePaginate = require('mongoose-pagination');
 var fs = require('fs');
@@ -202,7 +205,12 @@ async function getCounterFollow(user_id){
 		return count;
 	});
 
-	return {following, followed};
+	var publications = await Publication.count({"user": user_id}).exec((err, count) => {
+		if(err) handleError(err);
+		return count;
+	});
+
+	return {following, followed, publications};
 }
 
 //update function to change any parameter of our user logged in. The password will NOT be allowed to change using this function.
@@ -286,4 +294,4 @@ module.exports = {
 	updateUser,
 	uploadImage,
 	getImageFile
-}
+};
