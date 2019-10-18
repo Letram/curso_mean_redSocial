@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Curso para hacer una red social MEAN Stack';
+  title = 'MEAN Social network';
 }

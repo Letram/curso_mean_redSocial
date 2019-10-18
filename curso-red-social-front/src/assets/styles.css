@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.h1-strong{
+  font-size: 3rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #95a5a6;
+}
+
