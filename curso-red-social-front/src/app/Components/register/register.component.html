@@ -1,5 +1,14 @@
 <div class="col-lg-5">
   <h1 class="h1-strong">{{title}}</h1>
+
+  <div class="alert alert-success" *ngIf="status == 1">
+    Signup completed. <a [routerLink]="['/login']">Sign in here!</a>
+  </div>
+
+  <div class="alert alert-danger" *ngIf="status == -1">
+    Register not completed, maybe your username or email are already in use. Please try again.
+  </div>
+
   <form action="" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" class="col-lg-auto">
     <p>
       <label for="register_form_name">Name</label>

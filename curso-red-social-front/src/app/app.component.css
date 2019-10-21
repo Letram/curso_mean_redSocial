@@ -4,9 +4,28 @@
   background: #e74c3c;
 }
 
-.navbar-brand, .nav-link{
+.navbar-brand, .nav-link, .dropdown a{
   color: #ecf0f1;
 }
-.navbar-brand:hover, .nav-link:hover{
+.navbar-brand:hover{
   color: #bdc3c7;
+}
+
+.active{
+  border-bottom: 3px solid #bdc3c7;
+}
+
+li > a.active, li > a:hover {
+  background: #c0392b;
+}
+
+.navbar .navbar-collapse .navbar-nav .dropdown .dropdown-menu  .dropdown-item{
+  color: #e74c3c;
+}
+.navbar .navbar-collapse .navbar-nav .dropdown .dropdown-menu  .dropdown-item:hover{
+  background: #bdc3c7;
+}
+
+.pointer{
+  cursor: pointer;
 }
