@@ -18,6 +18,7 @@ export class UserService {
   //user data and auth token
   public identity: User;
   public token: string;
+  public stats;
 
   constructor(public http: HttpClient) {
     this.url = GLOBAL.url;
@@ -31,7 +32,7 @@ export class UserService {
     return this.http.post(this.url + "register", userJson, {headers: headers})
   }
 
-  login(user_to_login: User, getToken = null): Observable<any> {
+  login(user_to_login, getToken = null): Observable<any> {
     if (getToken) {
       // @ts-ignore
       user_to_login.getToken = getToken
@@ -57,5 +58,29 @@ export class UserService {
       this.token = token;
     } else this.token = null;
     return this.token;
+  }
+
+  getStoredStatistics(){
+    let stats = JSON.parse(localStorage.getItem("stats"));
+
+    if(stats != "undefined"){
+      this.stats = stats;
+    }else{
+      this.stats = null;
+    }
+
+    return this.stats;
+  }
+
+  getStatistics(user_id = null): Observable<any>{
+    let headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('Authorization', this.parseStoredToken());
+
+    if(user_id != null){
+      return this.http.get(this.url+"counters/"+user_id, {headers: headers});
+    }else {
+      return this.http.get(this.url+"counters", {headers: headers});
+    }
   }
 }

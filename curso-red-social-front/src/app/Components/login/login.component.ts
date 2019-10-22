@@ -44,7 +44,6 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('identity', JSON.stringify(this.identity));
           //get user token
           this.getToken();
-          this.status = 1;
         }
       },
       error => {
@@ -54,7 +53,7 @@ export class LoginComponent implements OnInit {
     );
   }
 
-  getToken(){
+  getToken() {
     this.userService.login(this.user, 'true').subscribe(
       response => {
         this.token = response.token;
@@ -64,9 +63,7 @@ export class LoginComponent implements OnInit {
           //persist token REMEMBER THAT LOCALSTORAGE ONLY STORES DATA AS STRING OR NUMBER -> USE JSON
           localStorage.setItem('token', this.token);
           //get user statistics
-          this.status = 1;
-
-          this.router.navigate(['/'])
+          this.getStatistics();
         }
       },
       error => {
@@ -74,5 +71,20 @@ export class LoginComponent implements OnInit {
         this.status = -1;
       }
     )
+  }
+
+  getStatistics() {
+    this.userService.getStatistics().subscribe(
+      response => {
+        console.log({stats: response});
+        localStorage.setItem("stats", JSON.stringify(response));
+        this.status = 1;
+        this.router.navigate(['/']).then(_ => {
+        });
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 }
