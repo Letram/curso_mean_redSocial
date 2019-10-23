@@ -4,7 +4,8 @@
       <h1>{{title}}</h1>
       <p class="lead">Enjoy your friends publications and share your life best moments.</p>
       <p class="lead d-flex justify-content-around">
-        <a class="btn btn-success btn-lg"  [routerLink]="['/login']" [routerLinkActive]="['active']" role="button">My profile</a>
+        <a *ngIf="!loggedIn" class="btn btn-success btn-lg" role="button" [routerLink]="['/login']" [routerLinkActive]="['active']">Login</a>
+        <a *ngIf="loggedIn" class="btn btn-success btn-lg" role="button" [routerLink]="['/profile']" [routerLinkActive]="['active']">My profile</a>
         <a class="btn btn-primary btn-lg" href="" role="button">Timeline</a>
         <a class="btn btn-info btn-lg" href="" role="button">People</a>
       </p>

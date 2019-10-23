@@ -29,3 +29,14 @@ li > a.active, li > a:hover {
 .pointer{
   cursor: pointer;
 }
+
+.nav-item.dropdown {
+  display: flex;
+  align-items: center;
+}
+.nav-item.dropdown .avatar{
+  width: 3em;
+  height: 3em;
+  border-radius: 100px;
+  overflow: hidden;
+}

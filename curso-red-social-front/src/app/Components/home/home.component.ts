@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from "../../Services/user.service";
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   public title:string;
-  constructor() {
+  public loggedIn:boolean;
+
+  constructor(private userService:UserService) {
     this.title = "Welcome to a MEAN Social network";
   }
 
   ngOnInit() {
     console.log("Home component loaded");
+    this.loggedIn = this.userService.parseStoredUser() != undefined;
   }
 
 }

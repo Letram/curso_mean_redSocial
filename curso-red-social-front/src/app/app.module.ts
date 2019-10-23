@@ -1,14 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 // routes config importing these consts to then load them into the import section (routing is a ModuleWithProviders module) and providers'
 // (appRoutingProviders will be an array of providers)
 import {routing, appRoutingProviders} from './app.routing';
 // Components
-import { AppComponent } from './app.component';
-import { LoginComponent } from './Components/login/login.component';
-import { RegisterComponent } from './Components/register/register.component';
-import { HomeComponent } from './Components/home/home.component';
-import { ProfileComponent } from './Components/profile/profile.component';
+import {AppComponent} from './app.component';
+import {LoginComponent} from './Components/login/login.component';
+import {RegisterComponent} from './Components/register/register.component';
+import {HomeComponent} from './Components/home/home.component';
+import {ProfileComponent} from './Components/profile/profile.component';
+import {PeopleComponent} from './Components/people/people.component';
 
 // Other modules
 import {FormsModule} from '@angular/forms';
@@ -20,7 +21,8 @@ import {HttpClientModule} from "@angular/common/http";
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    PeopleComponent
   ],
   imports: [
     BrowserModule,
@@ -33,4 +35,5 @@ import {HttpClientModule} from "@angular/common/http";
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

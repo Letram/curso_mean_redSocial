@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c2f03c1-5460-4b34-b921-219a5bdd83b9" name="Default" comment="register, login and logout done.">
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/profile/profile.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/profile/profile.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/profile/profile.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/profile/profile.component.ts" afterDir="false" />
+    <list default="true" id="2c2f03c1-5460-4b34-b921-219a5bdd83b9" name="Default" comment="profile component started">
+      <change afterPath="$PROJECT_DIR$/api/uploads/users/Er4G0n-I44WQFT4Eh-zYq1OE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/uploads/users/P0CFb4-kvb-p_2WuKN2ABV68.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/uploads/users/R9C85sl891tZYiZqSBhy0lbN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/uploads/users/TEu7mTbkHTC9aFEmRMNwYpIs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/uploads/users/X5_ULKkLcxCpmKGKCXBDl2Bv.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/uploads/users/Ymh4I7UgHoTMqDLsj20zRfTz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/upload.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/upload.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/profile/profile.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/profile/profile.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/profile/profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/profile/profile.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/app.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.routing.ts" afterDir="false" />
@@ -89,7 +102,8 @@
       <workItem from="1571122992058" duration="3631000" />
       <workItem from="1571135007612" duration="3700000" />
       <workItem from="1571655332792" duration="11160000" />
-      <workItem from="1571745512695" duration="2546000" />
+      <workItem from="1571745512695" duration="2637000" />
+      <workItem from="1571818974987" duration="12336000" />
     </task>
     <task id="LOCAL-00001" summary="Publication controller done">
       <created>1571062219646</created>
@@ -119,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571666471282</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="profile component started">
+      <created>1571752486243</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571752486243</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +165,7 @@
     <MESSAGE value="Message controller done. Backend seem to be done" />
     <MESSAGE value="frontend started." />
     <MESSAGE value="register, login and logout done." />
-    <option name="LAST_COMMIT_MESSAGE" value="register, login and logout done." />
+    <MESSAGE value="profile component started" />
+    <option name="LAST_COMMIT_MESSAGE" value="profile component started" />
   </component>
 </project>

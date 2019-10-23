@@ -1,3 +1,44 @@
 <div class="col-lg-5">
   <h1 class="h1-strong">{{title}}</h1>
+  <div class="alert alert-success" *ngIf="status == 1">
+    Update completed successfully.
+  </div>
+
+  <div class="alert alert-danger" *ngIf="status == -1">
+    An error occurred while trying to update your data.
+  </div>
+    <img *ngIf="user.image" src="{{userService.url + 'get-image-user/' + user.image}}" alt="Avatar" class="img-fluid img-thumbnail mx-auto d-block">
+  <form #editUserForm="ngForm" (ngSubmit)="onSubmit()" class="col-auto">
+    <div class="form-group">
+      <label for="edit_name">Name</label>
+      <input id="edit_name" name="name" type="text" class="form-control" #name="ngModel" [(ngModel)]="user.name"
+             required/>
+      <span *ngIf="!name.valid && name.touched">Name not valid.</span>
+    </div>
+    <div class="form-group">
+      <label for="edit_surname">Surname</label>
+      <input id="edit_surname" name="surname" type="text" class="form-control" #surname="ngModel" [(ngModel)]="user.surname"
+             required/>
+      <span *ngIf="!surname.valid && surname.touched">Surname not valid.</span>
+    </div>
+    <div class="form-group">
+      <label for="edit_nick">Nick</label>
+      <input id="edit_nick" name="nick" type="text" class="form-control" #nick="ngModel" [(ngModel)]="user.nick"
+             required/>
+      <span *ngIf="!nick.valid && nick.touched">Password is required.</span>
+    </div>
+    <div class="form-group">
+      <label for="edit_email">Email</label>
+      <input id="edit_email" name="email" type="email" class="form-control" #email="ngModel" [(ngModel)]="user.email" required
+             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+      <span *ngIf="!email.valid && email.touched">Email is not valid.</span>
+    </div>
+    <div class="form-group">
+      <label for="edit_avatar">Avatar</label>
+      <input id="edit_avatar" name="avatar" type="file" placeholder="Upload image..." (change)="onFileChanged($event)" />
+      <span *ngIf="!email.valid && email.touched">Email is not valid.</span>
+    </div>
+
+    <input type="submit" value="Edit info" class="btn btn-warning" [disabled]="!editUserForm.form.valid">
+  </form>
 </div>

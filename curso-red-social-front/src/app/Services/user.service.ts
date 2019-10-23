@@ -83,4 +83,25 @@ export class UserService {
       return this.http.get(this.url+"counters", {headers: headers});
     }
   }
+
+  updateUser(user:User):Observable<any>{
+    let params = JSON.stringify(user);
+    let headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('Authorization', this.parseStoredToken());
+      return this.http.put(this.url + "update-user/" + user._id, params, {headers: headers});
+  }
+
+  getUsers(page = null): Observable<any>{
+    let headers = new HttpHeaders()
+      .set('Content-type', 'application/json')
+      .set('Authorization', this.token);
+    return this.http.get(this.url+"users/" + page, {headers:headers});
+  }
+  getUser(user_id): Observable<any>{
+    let headers = new HttpHeaders()
+      .set('Content-type', 'application/json')
+      .set('Authorization', this.token);
+    return this.http.get(this.url+"user/"+user_id, {headers:headers});
+  }
 }

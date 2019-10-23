@@ -9,7 +9,7 @@
         <a class="nav-link" href="#">Timeline</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Users</a>
+        <a class="nav-link" [routerLink]="['/people']" [routerLinkActive]="['active']">People</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto" *ngIf="identity">
@@ -17,9 +17,11 @@
 
       </li>
       <li class="nav-item dropdown">
+        <img *ngIf="identity.image" src="{{userService.url + 'get-image-user/' + identity.image}}" alt="Avatar"
+             class="avatar img-thumbnail m-1">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown">{{identity.name}}</a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item"  [routerLink]="['/profile']" [routerLinkActive]="['active']">Profile</a>
+          <a class="dropdown-item" [routerLink]="['/profile']" [routerLinkActive]="['active']">Profile</a>
           <a class="dropdown-item" href="#">Settings</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item pointer" (click)="logout()">Logout</a>
