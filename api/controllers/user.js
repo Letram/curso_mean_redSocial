@@ -18,7 +18,6 @@ function home(request, response) {
 }
 
 function pruebas(request, response) {
-    console.log(request.body);
     response.status(200).send({
         message: "testing in nodeJS server"
     });
@@ -139,7 +138,7 @@ function getUsers(req, res) {
     if (req.params.page) {
         page = req.params.page;
     }
-    var itemsPerPage = 5;
+    var itemsPerPage = 3;
 
     User.find().sort('_id').paginate(page, itemsPerPage, (err, users, total) => {
         if (err) return response.status(500).send({
@@ -152,8 +151,8 @@ function getUsers(req, res) {
         followUsersIds(identity_userID).then((value) => {
             return res.status(200).send({
                 users,
-                users_following: value.following,
-                users_followed: value.followed,
+                users_following: value.following_clean,
+                users_followed: value.followed_clean,
                 total,
                 pages: Math.ceil(total / itemsPerPage)
             });
@@ -162,37 +161,37 @@ function getUsers(req, res) {
 }
 
 async function followUsersIds(user_id) {
+
+    //cuando hago el exec(), las cosas que se devuelven en el callback => (error, follows), por ejemplo, van en un pipe a: follows -> then((value)) y error -> catch((error))
     var following = await Follow.find({"user": user_id}).select({
         "_id": 0,
         "__v": 0,
         "user": 0
-    }).exec((err, follows) => {
-        return follows;
-    });
+    }).exec().then((follow) => {return follow}).catch((err) => {return handleError(err)});
 
+    //cuando hago el exec(), las cosas que se devuelven en el callback => (error, follows), por ejemplo, van en un pipe a: follows -> then((value)) y error -> catch((error))
     var followed = await Follow.find({"followed": user_id}).select({
         "_id": 0,
         "__v": 0,
         "followed": 0
-    }).exec((err, follows) => {
-        return follows;
-    });
+    }).exec().then((follow) => {return follow}).catch((err) => {return handleError(err)});
 
 //procesar following ids
     var following_clean = [];
-    if(following){
+    //if(following){
         following.forEach((follow) => {
             following_clean.push(follow.followed);
         });
-    }
+    //}
 
 //procesar followed ids
     var followed_clean = [];
-    if(followed){
+    //if(followed){
         followed.forEach((follow) => {
             followed_clean.push(follow.user);
         });
-    }
+    //}
+    console.log({following_clean, followed_clean});
 
     return {following_clean, followed_clean};
 }
@@ -208,7 +207,7 @@ function getCounters(req, res) {
 }
 
 async function getCounterFollow(user_id) {
-    var following = await Follow.count({"user": user_id}).exec((err, count) => {
+/*    var following = await Follow.count({"user": user_id}).exec((err, count) => {
         if (err) return handleError(err);
         return count;
     });
@@ -221,7 +220,12 @@ async function getCounterFollow(user_id) {
     var publications = await Publication.count({"user": user_id}).exec((err, count) => {
         if (err) handleError(err);
         return count;
-    });
+    });*/
+    var following = await Follow.count({"user": user_id}).exec().then((count) => {return count}).catch((err) => {handleError(err)});
+
+    var followed = await Follow.count({"followed": user_id}).exec().then((count) => {return count}).catch((err) => {handleError(err)});
+
+    var publications = await Publication.count({"user": user_id}).exec().then((count) => {return count}).catch((err) => {handleError(err)});
 
     return {following, followed, publications};
 }

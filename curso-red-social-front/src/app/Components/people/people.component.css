@@ -1,0 +1,9 @@
+.img-container{
+  height: 100%;
+  width: auto;
+}
+.img-avatar{
+  height: 6em;
+  width: 6em;
+  object-fit: cover;
+}

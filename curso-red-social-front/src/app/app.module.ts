@@ -10,6 +10,7 @@ import {RegisterComponent} from './Components/register/register.component';
 import {HomeComponent} from './Components/home/home.component';
 import {ProfileComponent} from './Components/profile/profile.component';
 import {PeopleComponent} from './Components/people/people.component';
+import { SidebarComponent } from './Components/sidebar/sidebar.component';
 
 // Other modules
 import {FormsModule} from '@angular/forms';
@@ -22,7 +23,8 @@ import {HttpClientModule} from "@angular/common/http";
     RegisterComponent,
     HomeComponent,
     ProfileComponent,
-    PeopleComponent
+    PeopleComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
