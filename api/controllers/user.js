@@ -207,25 +207,12 @@ function getCounters(req, res) {
 }
 
 async function getCounterFollow(user_id) {
-/*    var following = await Follow.count({"user": user_id}).exec((err, count) => {
-        if (err) return handleError(err);
-        return count;
-    });
 
-    var followed = await Follow.count({"followed": user_id}).exec((err, count) => {
-        if (err) return handleError(err);
-        return count;
-    });
+    var following = await Follow.countDocuments({"user": user_id}).exec().then((count) => {return count}).catch((err) => {handleError(err)});
 
-    var publications = await Publication.count({"user": user_id}).exec((err, count) => {
-        if (err) handleError(err);
-        return count;
-    });*/
-    var following = await Follow.count({"user": user_id}).exec().then((count) => {return count}).catch((err) => {handleError(err)});
+    var followed = await Follow.countDocuments({"followed": user_id}).exec().then((count) => {return count}).catch((err) => {handleError(err)});
 
-    var followed = await Follow.count({"followed": user_id}).exec().then((count) => {return count}).catch((err) => {handleError(err)});
-
-    var publications = await Publication.count({"user": user_id}).exec().then((count) => {return count}).catch((err) => {handleError(err)});
+    var publications = await Publication.countDocuments({"user": user_id}).exec().then((count) => {return count}).catch((err) => {handleError(err)});
 
     return {following, followed, publications};
 }

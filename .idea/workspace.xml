@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c2f03c1-5460-4b34-b921-219a5bdd83b9" name="Default" comment="people component started. file upload service implemented.">
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/follow.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/follow.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/assets/default_avatar.png" afterDir="false" />
+    <list default="true" id="2c2f03c1-5460-4b34-b921-219a5bdd83b9" name="Default" comment="follows service implemented.">
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/publication-list/publication-list.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/publication-list/publication-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/publication-list/publication-list.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/publication-list/publication-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/timeline/timeline.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/timeline/timeline.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/timeline/timeline.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/timeline/timeline.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/publication.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/publication.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/controllers/publication.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/publication.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/profile/profile.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/profile/profile.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Models/Publication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Models/Publication.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/app.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.routing.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/assets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/assets/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,7 +106,8 @@
       <workItem from="1571655332792" duration="11160000" />
       <workItem from="1571745512695" duration="2637000" />
       <workItem from="1571818974987" duration="12446000" />
-      <workItem from="1571904513194" duration="17315000" />
+      <workItem from="1571904513194" duration="17356000" />
+      <workItem from="1571986765260" duration="16500000" />
     </task>
     <task id="LOCAL-00001" summary="Publication controller done">
       <created>1571062219646</created>
@@ -139,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571837713196</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="follows service implemented.">
+      <created>1571925368440</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571925368440</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +185,7 @@
     <MESSAGE value="register, login and logout done." />
     <MESSAGE value="profile component started" />
     <MESSAGE value="people component started. file upload service implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="people component started. file upload service implemented." />
+    <MESSAGE value="follows service implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="follows service implemented." />
   </component>
 </project>

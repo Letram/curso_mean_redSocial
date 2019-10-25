@@ -12,7 +12,7 @@
             {{identity.name + " " + identity.surname}}
           </a>
         </p>
-        <p class="text-left mb-0 text-muted user-nickname">{{identity.nick}}</p>
+        <p class="text-center mb-0 text-muted user-nickname">{{identity.nick}}</p>
       </div>
       <div class="spacer my-1"></div>
       <div class="stats row w-100" *ngIf="stats">
@@ -45,18 +45,37 @@
           </span>
           </a>
         </div>
-        <!--        <div class="user-following text-left">
-                  Following {{stats.following}} users.
-                </div>
-                <div class="user-followed-by text-left">
-                  Followed by {{stats.followed}} users.
-                </div>
-                <div class="user-publications text-left">
-                  {{stats.publications}} publications written.
-                </div>-->
       </div>
     </div>
   </div>
   <!-- PUBLICATION FORM -->
-
+  <div id="pub_card" class="card mt-3">
+    <div class="alert alert-success" *ngIf="status == 1">
+      Publication posted successfully!
+    </div>
+    <div class="alert alert-danger" *ngIf="status == -1">
+      Publication not sent...
+    </div>
+    <div class="card-body">
+      <form #publicationForm="ngForm" (ngSubmit)="onSubmit(publicationForm); emitPublcationCreatedEvent($event)" class="col-auto">
+        <div class="form-group">
+          <label for="publication_text">Tell us what you did the other day!</label>
+          <textarea class="form-control" rows="5" id="publication_text" name="text" #text="ngModel"
+                    [(ngModel)]="publication.text" required></textarea>
+          <span *ngIf="!text.valid && text.touched">This field is required.</span>
+        </div>
+        <div class="input-group">
+          <label class="input-group-btn">
+                    <span class="btn btn-carrot btn-file">
+                        Browse&hellip; <input type="file">
+                    </span>
+          </label>
+          <input type="text" class="form-control" placeholder="Upload a photo!" readonly>
+        </div>
+        <div class="w-100 d-flex justify-content-center">
+          <input type="submit" class="btn btn-success" [disabled]="!publicationForm.form.valid" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

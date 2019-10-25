@@ -2,7 +2,7 @@
   <h1 class="h1-strong">{{title}}</h1>
   <div class="row">
     <div class="col-8">
-      <div class="people d-flex flex-column">
+      <div id="people" class="d-flex flex-column">
         <!-- LIST -->
         <div *ngFor="let user of users" class="item-user m-1">
           <div class="card text-center d-flex flex-row align-items-center">
@@ -28,7 +28,7 @@
                 <button class="btn m-1" *ngIf="users_user_is_following.indexOf(user._id) >= 0"
                         (mouseenter)="onMouseEnter(user._id)"
                         (mouseleave)="onMouseLeave(user._id)"
-                        [class.btn-info]="user._id != followUserOver"
+                        [class.btn-success]="user._id != followUserOver"
                         [class.btn-danger]="user._id == followUserOver">
                   <span *ngIf="user._id == followUserOver else following"
                         (click)="unfollowUser(user._id)">Unfollow</span>
@@ -56,6 +56,5 @@
     <div class="col-4">
       <app-sidebar></app-sidebar>
     </div>
-
   </div>
 </div>

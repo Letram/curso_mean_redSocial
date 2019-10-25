@@ -104,4 +104,8 @@ export class UserService {
       .set('Authorization', this.token);
     return this.http.get(this.url+"user/"+user_id, {headers:headers});
   }
+
+  updateStats(stats: any) {
+    localStorage.setItem('stats', JSON.stringify(stats));
+  }
 }

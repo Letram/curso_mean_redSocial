@@ -10,11 +10,14 @@ import {RegisterComponent} from './Components/register/register.component';
 import {HomeComponent} from './Components/home/home.component';
 import {ProfileComponent} from './Components/profile/profile.component';
 import {PeopleComponent} from './Components/people/people.component';
-import { SidebarComponent } from './Components/sidebar/sidebar.component';
+import {SidebarComponent} from './Components/sidebar/sidebar.component';
+import {TimelineComponent} from './Components/timeline/timeline.component';
 
 // Other modules
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
+import {MomentModule} from "ngx-moment";
+import { PublicationListComponent } from './Components/publication-list/publication-list.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +27,16 @@ import {HttpClientModule} from "@angular/common/http";
     HomeComponent,
     ProfileComponent,
     PeopleComponent,
-    SidebarComponent
+    SidebarComponent,
+    TimelineComponent,
+    PublicationListComponent
   ],
   imports: [
     BrowserModule,
     routing,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MomentModule
   ],
   providers: [
     appRoutingProviders

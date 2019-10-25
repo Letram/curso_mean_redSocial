@@ -7,6 +7,7 @@ import {RegisterComponent} from './Components/register/register.component';
 import {HomeComponent} from "./Components/home/home.component";
 import {ProfileComponent} from './Components/profile/profile.component';
 import {PeopleComponent} from "./Components/people/people.component";
+import {TimelineComponent} from "./Components/timeline/timeline.component";
 
 // in this case depending on the path of the url a different component will be loaded
 /**
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
   {path: 'profile', component: ProfileComponent},
   {path: 'people', component: PeopleComponent},
   {path: 'people/:page', component: PeopleComponent},
+  {path: 'timeline', component:TimelineComponent},
   {path: '**', component: HomeComponent}
 ];
 

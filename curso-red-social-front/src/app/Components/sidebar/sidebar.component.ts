@@ -1,28 +1,87 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, EventEmitter, Input, Output} from '@angular/core';
 import {UserService} from "../../Services/user.service";
+import {Publication} from "../../Models/Publication";
+import {PublicationService} from "../../Services/publication.service";
+import {Router, ActivatedRoute, Params, Route} from '@angular/router';
+
+declare var $: any;
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
-  providers: [UserService]
+  providers: [UserService, PublicationService]
 })
 export class SidebarComponent implements OnInit {
 
   public identity;
   public token;
   public stats;
-  public status;
+  public status = 0;
+  public publication: Publication;
 
-  constructor(private userService: UserService) {
+  //outputs
+  @Output() publicationCreated = new EventEmitter();
+
+  constructor(
+    private userService: UserService,
+    private publicationService: PublicationService,
+    private route:ActivatedRoute, private router:Router) {
     this.identity = this.userService.parseStoredUser();
     this.token = this.userService.parseStoredToken();
     this.stats = this.userService.getStoredStatistics();
+    this.publication = new Publication("", "", "", "", this.identity._id);
   }
 
   ngOnInit() {
     console.log("Sidebar component loaded...");
     console.log({stats: this.stats});
+
+    //For the filechooser
+    $(document).on('change', '.btn-file :file', function () {
+      var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+      input.trigger('fileselect', [numFiles, label]);
+    });
+
+    $(document).ready(function () {
+      $('.btn-file :file').on('fileselect', function (event, numFiles, label) {
+
+        var input = $(this).parents('.input-group').find(':text'),
+          log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+        if (input.length) {
+          input.val(log);
+        } else {
+          if (log) alert(log);
+        }
+
+      });
+    });
   }
 
+  onSubmit(form) {
+    this.publicationService.addPublication(this.token, this.publication).subscribe(
+      response => {
+        console.log(response);
+        if (!response.publication) this.status = -1;
+        else {
+          form.reset();
+          this.status = 1;
+          this.stats.publications++;
+          this.userService.updateStats(this.stats);
+          this.router.navigate(['/timeline']);
+        }
+      },
+      error => {
+        console.log(error);
+        this.status = -1;
+      }
+    );
+  }
+  emitPublcationCreatedEvent(event){
+    console.log("Se ha disparado el evento!");
+    this.publicationCreated.emit({publicationCreated: true});
+  };
 }

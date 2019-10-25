@@ -7,3 +7,12 @@
   width: 6em;
   object-fit: cover;
 }
+
+.user-name{
+  font-weight: bold;
+}
+
+.user-name a{
+  color: #e74c3c;
+}
+
