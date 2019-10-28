@@ -8,7 +8,7 @@
     <div class="card-body d-flex flex-column align-items-center justify-content-between px-0 w-100">
       <div class="d-flex flex-column">
         <p class="text-left mb-0 user-name">
-          <a href="#">
+          <a [routerLink]="['/profile', identity._id]">
             {{identity.name + " " + identity.surname}}
           </a>
         </p>
@@ -28,7 +28,7 @@
         <div class="col-4">
           <a href="#" class="d-flex flex-column stats-value">
           <span>
-            Followed
+            Followers
           </span>
             <span>
             {{stats.followed}}
@@ -67,7 +67,7 @@
         <div class="input-group">
           <label class="input-group-btn">
                     <span class="btn btn-carrot btn-file">
-                        Browse&hellip; <input type="file">
+                        Browse&hellip; <input type="file" (change)="fileChangedEvent($event)">
                     </span>
           </label>
           <input type="text" class="form-control" placeholder="Upload a photo!" readonly>

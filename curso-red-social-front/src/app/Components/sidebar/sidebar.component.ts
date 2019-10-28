@@ -3,6 +3,7 @@ import {UserService} from "../../Services/user.service";
 import {Publication} from "../../Models/Publication";
 import {PublicationService} from "../../Services/publication.service";
 import {Router, ActivatedRoute, Params, Route} from '@angular/router';
+import {UploadService} from "../../Services/upload.service";
 
 declare var $: any;
 
@@ -10,7 +11,7 @@ declare var $: any;
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
-  providers: [UserService, PublicationService]
+  providers: [UserService, PublicationService, UploadService]
 })
 export class SidebarComponent implements OnInit {
 
@@ -26,7 +27,10 @@ export class SidebarComponent implements OnInit {
   constructor(
     private userService: UserService,
     private publicationService: PublicationService,
-    private route:ActivatedRoute, private router:Router) {
+    private uploadService: UploadService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
     this.identity = this.userService.parseStoredUser();
     this.token = this.userService.parseStoredToken();
     this.stats = this.userService.getStoredStatistics();
@@ -67,11 +71,18 @@ export class SidebarComponent implements OnInit {
         console.log(response);
         if (!response.publication) this.status = -1;
         else {
-          form.reset();
-          this.status = 1;
-          this.stats.publications++;
-          this.userService.updateStats(this.stats);
-          this.router.navigate(['/timeline']);
+          //if the publication has any file we have to upload it.
+          this.uploadService.makeUploadRequest('upload-image-pub/' + response.publication._id, [], this.filesToUpload, this.token, 'image')
+            .then(
+              (onSuccess:any) => {
+                this.publication.file = onSuccess.image;
+                form.reset();
+                this.status = 1;
+                this.stats.publications++;
+                this.userService.updateStats(this.stats);
+                this.router.navigate(['/timeline']);
+              }
+            );
         }
       },
       error => {
@@ -80,8 +91,17 @@ export class SidebarComponent implements OnInit {
       }
     );
   }
-  emitPublcationCreatedEvent(event){
+
+  emitPublcationCreatedEvent(event) {
     console.log("Se ha disparado el evento!");
     this.publicationCreated.emit({publicationCreated: true});
   };
+
+  public filesToUpload: Array<File>;
+
+  fileChangedEvent(event: any) {
+
+    //event.target is a file input that has a property files in which files are stored.
+    this.filesToUpload = <Array<File>>event.target.files;
+  }
 }

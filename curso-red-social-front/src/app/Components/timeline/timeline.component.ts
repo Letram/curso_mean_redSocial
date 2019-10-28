@@ -5,7 +5,6 @@ import {UserService} from "../../Services/user.service";
 import {UploadService} from "../../Services/upload.service";
 import {User} from "../../Models/User";
 import {PublicationService} from "../../Services/publication.service";
-import {error} from "util";
 
 declare var $: any;
 

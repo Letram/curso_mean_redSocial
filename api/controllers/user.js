@@ -112,22 +112,17 @@ function getUser(request, response) {
         if (!user) return response.status(404).send({
             message: "El usuario no existe."
         });
-        followThisUser(req.user.sub, userID).then((value) => {
+        followThisUser(request.user.sub, userID).then((value) => {
             user.password = undefined;
-            return res.status(200).send({user, "following": value.following, "followed": value.followed});
+            console.log(value);
+            return response.status(200).send({user, "following": value.following, "followed": value.followed});
         });
     });
 }
 
 async function followThisUser(identity_user_id, user_id) {
-    var following = await Follow.findOne({"user": identity_user_id, "followed": user_id}).exec((err, follow) => {
-        if (err) return handleError(err);
-        return follow;
-    });
-    var followed = await Follow.findOne({"user": user_id, "followed": identity_user_id}).exec((err, follow) => {
-        if (err) return handleError(err);
-        return follow;
-    });
+    var following = await Follow.findOne({"user": identity_user_id, "followed": user_id}).exec().then(follow => follow).catch(err => console.log(err));
+    var followed = await Follow.findOne({"user": user_id, "followed": identity_user_id}).exec().then(follow => follow).catch(err => console.log(err));
     return {following, followed};
 }
 
@@ -191,8 +186,6 @@ async function followUsersIds(user_id) {
             followed_clean.push(follow.user);
         });
     //}
-    console.log({following_clean, followed_clean});
-
     return {following_clean, followed_clean};
 }
 
@@ -208,11 +201,11 @@ function getCounters(req, res) {
 
 async function getCounterFollow(user_id) {
 
-    var following = await Follow.countDocuments({"user": user_id}).exec().then((count) => {return count}).catch((err) => {handleError(err)});
+    var following = await Follow.countDocuments({"user": user_id}).exec().then((count) => {return count}).catch((err) => {console.log(err)});
 
-    var followed = await Follow.countDocuments({"followed": user_id}).exec().then((count) => {return count}).catch((err) => {handleError(err)});
+    var followed = await Follow.countDocuments({"followed": user_id}).exec().then((count) => {return count}).catch((err) => {console.log(err)});
 
-    var publications = await Publication.countDocuments({"user": user_id}).exec().then((count) => {return count}).catch((err) => {handleError(err)});
+    var publications = await Publication.countDocuments({"user": user_id}).exec().then((count) => {return count}).catch((err) => {console.log(err)});
 
     return {following, followed, publications};
 }
@@ -238,8 +231,8 @@ function updateUser(req, res) {
     }).exec((err, users) => {
     	var user_isset = false;
     	users.forEach((user) => {
-    		console.log({user: user, currentId: userId});
-    		console.log({user_id: user._id.toString(), current_id: userId, comparison: user._id.toString() === userId});
+    		//console.log({user: user, currentId: userId});
+    		//console.log({user_id: user._id.toString(), current_id: userId, comparison: user._id.toString() === userId});
 			if ( user && user._id.toString() !== userId){
 				user_isset = true;
 			}

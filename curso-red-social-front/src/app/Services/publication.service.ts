@@ -38,4 +38,12 @@ export class PublicationService {
     return this.http.delete(this.url + "publication/" + pub_id, {headers});
   }
 
+  getPublicationsFromUser(authToken, page = 1, user_id): Observable<any> {
+    var headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('Authorization', authToken);
+    return this.http.get(this.url + "publications-user/" + user_id + "/" + page, {headers});
+  }
+
+
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {Publication} from "../../Models/Publication";
 import {UserService} from "../../Services/user.service";
@@ -23,6 +23,8 @@ export class PublicationListComponent implements OnInit {
   public total_publications;
   public page_size;
   public publications: Publication[];
+
+  @Input() user_id:string;
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -36,27 +38,25 @@ export class PublicationListComponent implements OnInit {
 
   ngOnInit() {
     console.log("Publication list component loaded...");
-    this.getPublications(this.page);
+    this.getPublications(this.user_id, this.page);
   }
 
-  getPublications(page, adding = false) {
-    this.publicationService.getPublications(this.token, page).subscribe(
+  getPublications(user_id, page, adding = false) {
+    this.publicationService.getPublicationsFromUser(this.token, page, user_id).subscribe(
       response => {
         console.log(response);
-        if (response.publications) {
-          this.total_publications = response.total_items;
-          this.pages = response.pages;
-          this.page_size = response.page_size;
-          if (!adding)
-            this.publications = response.publications;
-          else {
-            var publicationsAux = this.publications;
-            var publicationsToAppend = response.publications;
-            this.publications = publicationsAux.concat(publicationsToAppend);
-
-            $('html, body').animate({scrollTop: $('body').prop('scrollHeight')}, 500);
-          }
-          if (page > this.pages && !adding) this.router.navigate(['/home']).then(() => {});
+        this.total_publications = response.total_items;
+        this.pages = response.pages;
+        this.page_size = response.page_size;
+        if (!adding)
+          this.publications = response.publications;
+        else {
+          let publicationsAux = this.publications;
+          let publicationsToAppend = response.publications;
+          this.publications = publicationsAux.concat(publicationsToAppend);
+          if(this.total_publications == this.publications.length) this.noMore = true;
+          console.log({total_publications: response.total_items, current_publications: this.publications.length});
+          $('html, body').animate({scrollTop: $('body').prop('scrollHeight')}, 500);
         }
       },
       error => {
@@ -65,13 +65,14 @@ export class PublicationListComponent implements OnInit {
     );
   }
 
-  public moreAvailable = true;
+  public noMore = false;
   viewMore(){
-    if(this.publications.length >= this.total_publications) this.moreAvailable = false;
-    else{
-      this.page++;
+    if (this.publications.length == this.total_publications) {
+      this.noMore = true;
+    } else {
+      this.page += 1;
     }
-    this.getPublications(this.page, true);
+    this.getPublications(this.user_id, this.page, true);
   }
 
 }

@@ -1,0 +1,98 @@
+<div class="col-lg-auto">
+  <h1 class="h1-strong">{{title}}</h1>
+  <div class="row">
+    <div class="col-8">
+      <div class="row" *ngIf="user">
+        <div class="col-4 d-flex justify-content-center align-items-center flex-column">
+          <img src="{{userService.url + 'get-image-user/' + user.image}}" alt="avatar" class="img-avatar rounded-circle"
+               *ngIf="user.image">
+          <img src="../../../assets/default_avatar.png" alt="avatar" class="img-avatar rounded-circle"
+               *ngIf="!user.image">
+          <button class="btn btn-primary m-1 btn-block" *ngIf="user._id != identity._id && !is_followed_by_me" (click)="followUser(user._id)">
+            Follow
+          </button>
+          <button class="btn m-1 btn-block" *ngIf="user._id != identity._id && is_followed_by_me"
+                  (mouseenter)="onMouseEnter(user._id)"
+                  (mouseleave)="onMouseLeave(user._id)"
+                  (click)="unfollowUser(user._id)"
+                  [class.btn-success]="user._id != followUserOver"
+                  [class.btn-danger]="user._id == followUserOver">
+                  <span *ngIf="user._id == followUserOver else following">
+                    Unfollow
+                  </span>
+            <ng-template #following>
+              <span>Following</span>
+            </ng-template>
+          </button>
+        </div>
+        <div class="col-8 d-flex flex-column justify-content-center">
+            <span class="badge badge-concrete font-weight-bold mr-auto"
+                  *ngIf="user._id != identity._id && !is_following_me">
+                Not following you
+            </span>
+          <span class="badge badge-emerald font-weight-bold ml-auto" *ngIf="user._id != identity._id && is_following_me">
+                Follower
+            </span>
+          <div class="row">
+            <div class="col-8 d-flex flex-column justify-content-center">
+              <div class="user_data">
+                <span>Name</span>
+                <p id="profile_name">{{user.name}}</p>
+              </div>
+              <div class="user_data">
+                <span>Surname</span>
+                <p id="profile_surname">{{user.surname}}</p>
+              </div>
+              <div class="user_data">
+                <span>Nick</span>
+                <p id="profile_nick">{{user.nick}}</p>
+              </div>
+            </div>
+            <div class="col-4 flex-column" *ngIf="stats">
+              <div class="col-4 user_data">
+                <a href="#" class="d-flex flex-column stats-value">
+                <span>
+                  Following
+                </span>
+                  <p>
+                    {{stats.following}}
+                  </p>
+                </a>
+              </div>
+              <div class="col-4 user_data">
+                <a href="#" class="d-flex flex-column stats-value">
+          <span>
+            Followers
+          </span>
+                  <p>
+                    {{stats.followed}}
+                  </p>
+                </a>
+              </div>
+              <div class="col-4 user_data">
+                <a href="#" class="d-flex flex-column stats-value">
+          <span>
+            Publications
+          </span>
+                  <p>
+                    {{stats.publications}}
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- User publications -->
+      <div class="row" *ngIf="user">
+        <div class="col-12">
+          <h3>User publications:</h3>
+          <app-publication-list [user_id]="user._id" class="w-100"></app-publication-list>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <app-sidebar></app-sidebar>
+    </div>
+  </div>
+</div>

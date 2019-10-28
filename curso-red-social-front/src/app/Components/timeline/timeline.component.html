@@ -14,7 +14,7 @@
                    class="img-thumbnail img-avatar-publication rounded-circle m-1">
               <div>
                 <p class="text-left mb-0 publication-user-name">
-                  <a href="#">
+                  <a [routerLink]="['/profile', publication.user._id]">
                     {{publication.user.name + " " + publication.user.surname}}
                   </a>
                 </p>

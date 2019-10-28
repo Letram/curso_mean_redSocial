@@ -12,6 +12,7 @@ export class UploadService {
   }
 
   makeUploadRequest(path:string, params: Array<string>, files: Array<File>, authToken: string, fieldName: string){
+    console.log(this.url + path);
     return new Promise((resolve, reject) => {
       var formData: any = new FormData();
       var xhr = new XMLHttpRequest();

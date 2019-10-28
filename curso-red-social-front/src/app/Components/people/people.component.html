@@ -13,7 +13,7 @@
             <div class="card-body d-flex flex-row align-items-center justify-content-between">
               <div>
                 <p class="text-left mb-0 user-name">
-                  <a href="#">
+                  <a [routerLink]="['/profile', user._id]">
                     {{user.name + " " + user.surname}}
                   </a>
                 </p>
@@ -24,7 +24,6 @@
                 <button class="btn btn-primary m-1" *ngIf="users_user_is_following.indexOf(user._id) < 0"
                         (click)="followUser(user._id)">Follow
                 </button>
-                <!--            <button class="btn btn-info m-1" *ngIf="users_user_is_following.indexOf(user._id) >= 0">Following</button>-->
                 <button class="btn m-1" *ngIf="users_user_is_following.indexOf(user._id) >= 0"
                         (mouseenter)="onMouseEnter(user._id)"
                         (mouseleave)="onMouseLeave(user._id)"

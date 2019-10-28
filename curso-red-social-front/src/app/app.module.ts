@@ -12,12 +12,13 @@ import {ProfileComponent} from './Components/profile/profile.component';
 import {PeopleComponent} from './Components/people/people.component';
 import {SidebarComponent} from './Components/sidebar/sidebar.component';
 import {TimelineComponent} from './Components/timeline/timeline.component';
+import { PublicationListComponent } from './Components/publication-list/publication-list.component';
+import { UserProfileComponent } from './Components/user-profile/user-profile.component';
 
 // Other modules
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 import {MomentModule} from "ngx-moment";
-import { PublicationListComponent } from './Components/publication-list/publication-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PublicationListComponent } from './Components/publication-list/publicat
     PeopleComponent,
     SidebarComponent,
     TimelineComponent,
-    PublicationListComponent
+    PublicationListComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
