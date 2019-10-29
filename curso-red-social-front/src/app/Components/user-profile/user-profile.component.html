@@ -50,7 +50,7 @@
             </div>
             <div class="col-4 flex-column" *ngIf="stats">
               <div class="col-4 user_data">
-                <a href="#" class="d-flex flex-column stats-value">
+                <a class="d-flex flex-column stats-value" [routerLink]="['/following', user._id, 1]">
                 <span>
                   Following
                 </span>
@@ -60,7 +60,7 @@
                 </a>
               </div>
               <div class="col-4 user_data">
-                <a href="#" class="d-flex flex-column stats-value">
+                <a class="d-flex flex-column stats-value" [routerLink]="['/followers', user._id, 1]">
           <span>
             Followers
           </span>

@@ -1,0 +1,60 @@
+<div class="col-lg-auto">
+  <h1 class="h1-strong" *ngIf="currentUser">People that follow {{currentUser.nick}}</h1>
+  <div class="row">
+    <div class="col-8">
+      <div id="people" class="d-flex flex-column">
+        <!-- LIST -->
+        <div *ngFor="let follow of followers" class="item-user m-1">
+          <div class="card text-center d-flex flex-row align-items-center">
+            <img src="{{userService.url + 'get-image-user/' + follow.user.image}}" alt="" *ngIf="follow.user.image"
+                 class="card-img-top img-thumbnail img-avatar rounded-circle m-1">
+            <img src="../../../assets/default_avatar.png" alt="" *ngIf="!follow.user.image"
+                 class="card-img-top img-thumbnail img-avatar rounded-circle m-1">
+            <div class="card-body d-flex flex-row align-items-center justify-content-between">
+              <div>
+                <p class="text-left mb-0 user-name">
+                  <a [routerLink]="['/profile', follow.user._id]">
+                    {{follow.user.name + " " + follow.user.surname}}
+                  </a>
+                </p>
+                <p class="text-left mb-0 text-muted user-nickname">{{follow.user.nick}}</p>
+              </div>
+              <!-- FOLLOW / UNFOLLOW -->
+              <!--<div class="d-flex flex-column align-items-center" *ngIf="follow.user._id != identity._id">
+                <button class="btn btn-primary m-1" *ngIf="users_user_is_following.indexOf(follow.user._id) < 0"
+                        (click)="followUser(follow.user._id)">Follow
+                </button>
+                <button class="btn m-1" *ngIf="users_user_is_following.indexOf(follow.user._id) >= 0"
+                        (mouseenter)="onMouseEnter(follow.user._id)"
+                        (mouseleave)="onMouseLeave(follow.user._id)"
+                        [class.btn-success]="follow.user._id != followUserOver"
+                        [class.btn-danger]="follow.user._id == followUserOver">
+                  <span *ngIf="follow.user._id == followUserOver else following"
+                        (click)="unfollowUser(follow.user._id)">Unfollow</span>
+                  <ng-template #following>
+                    <span>Following</span>
+                  </ng-template>
+                </button>
+              </div>-->
+            </div>
+          </div>
+        </div>
+        <!-- PAGINATION -->
+        <nav>
+          <ul class="pagination">
+            <li *ngIf="page > 1" class="page-item">
+              <a class="page-link" [routerLink]="['/followers',currentUserId, prev_p]">Previous</a>
+            </li>
+            <li *ngIf="pages != page" class="page-item">
+              <a class="page-link" [routerLink]="['/followers', currentUserId, next_p]">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="col-4">
+      <app-sidebar></app-sidebar>
+    </div>
+  </div>
+</div>
+

@@ -18,6 +18,17 @@
   border-color: #e67e22;
 }
 
+.btn-alizarin{
+  color: #fff;
+  background: #e74c3c;
+  border-color: #e74c3c;
+}
 .w-70{
   width: 70%;
 }
+ .publication-image{
+   max-width: 20rem;
+   height: auto;
+ }
+
+

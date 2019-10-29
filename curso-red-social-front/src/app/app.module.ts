@@ -19,6 +19,8 @@ import { UserProfileComponent } from './Components/user-profile/user-profile.com
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 import {MomentModule} from "ngx-moment";
+import { UsersIFollowComponent } from './Components/users-i-follow/users-i-follow.component';
+import { FollowersComponent } from './Components/followers/followers.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import {MomentModule} from "ngx-moment";
     SidebarComponent,
     TimelineComponent,
     PublicationListComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    UsersIFollowComponent,
+    FollowersComponent
   ],
   imports: [
     BrowserModule,

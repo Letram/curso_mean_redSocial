@@ -298,10 +298,14 @@ function getImageFile(req, res) {
     var image_file = req.params.image_file;
     var file_path = './uploads/users/' + image_file;
 
-    fs.exists(file_path, (exists) => {
+    fs.access(file_path, (err) => {
+        if(err) return res.status(200).send({message: "No existe la imagen."});
+        else return res.sendFile(path.resolve(file_path));
+    });
+    /*fs.exists(file_path, (exists) => {
         if (exists) res.sendFile(path.resolve(file_path));
         else res.status(200).send({message: "No existe la imagen."});
-    });
+    });*/
 }
 
 //we are exporting "home" and "pruebas" functions so we can use them from other classes if we import this.

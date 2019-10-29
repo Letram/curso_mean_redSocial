@@ -9,6 +9,8 @@ import {ProfileComponent} from './Components/profile/profile.component';
 import {PeopleComponent} from "./Components/people/people.component";
 import {TimelineComponent} from "./Components/timeline/timeline.component";
 import {UserProfileComponent} from "./Components/user-profile/user-profile.component";
+import {UsersIFollowComponent} from "./Components/users-i-follow/users-i-follow.component";
+import {FollowersComponent} from "./Components/followers/followers.component";
 
 // in this case depending on the path of the url a different component will be loaded
 /**
@@ -23,6 +25,8 @@ const appRoutes: Routes = [
   {path: 'profile/:id', component: UserProfileComponent},
   {path: 'people', component: PeopleComponent},
   {path: 'people/:page', component: PeopleComponent},
+  {path: 'following/:user_id/:page', component: UsersIFollowComponent},
+  {path: 'followers/:user_id/:page', component: FollowersComponent},
   {path: 'timeline', component:TimelineComponent},
   {path: '**', component: HomeComponent}
 ];

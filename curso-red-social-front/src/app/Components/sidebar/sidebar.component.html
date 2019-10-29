@@ -17,7 +17,7 @@
       <div class="spacer my-1"></div>
       <div class="stats row w-100" *ngIf="stats">
         <div class="col-4">
-          <a href="#" class="d-flex flex-column stats-value">
+          <a class="d-flex flex-column stats-value" [routerLink]="['/following', identity._id, 1]">
             <span>
           Following
           </span>
@@ -26,7 +26,7 @@
           </span></a>
         </div>
         <div class="col-4">
-          <a href="#" class="d-flex flex-column stats-value">
+          <a class="d-flex flex-column stats-value" [routerLink]="['/followers', identity._id, 1]">
           <span>
             Followers
           </span>
@@ -36,7 +36,7 @@
           </a>
         </div>
         <div class="col-4">
-          <a href="#" class="d-flex flex-column stats-value">
+          <a class="d-flex flex-column stats-value" [routerLink]="['/profile', identity._id]">
           <span>
             Publications
           </span>
@@ -57,7 +57,7 @@
       Publication not sent...
     </div>
     <div class="card-body">
-      <form #publicationForm="ngForm" (ngSubmit)="onSubmit(publicationForm); emitPublcationCreatedEvent($event)" class="col-auto">
+      <form #publicationForm="ngForm" (ngSubmit)="onSubmit(publicationForm, $event);" class="col-auto">
         <div class="form-group">
           <label for="publication_text">Tell us what you did the other day!</label>
           <textarea class="form-control" rows="5" id="publication_text" name="text" #text="ngModel"

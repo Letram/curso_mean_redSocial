@@ -5,6 +5,7 @@ import {UserService} from "../../Services/user.service";
 import {UploadService} from "../../Services/upload.service";
 import {User} from "../../Models/User";
 import {PublicationService} from "../../Services/publication.service";
+import {error} from "util";
 
 declare var $: any;
 
@@ -38,6 +39,16 @@ export class TimelineComponent implements OnInit {
   ngOnInit() {
     console.log("Timeline component loaded...");
     this.getPublications(this.page);
+
+    $('#modal_confirmation').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget); // Button that triggered the modal
+      var publication_text = button.data('publication_text'); // Extract info from data-* attributes
+      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+      var modal = $(this);
+      modal.find('.modal-body p.text-muted').text(publication_text);
+    })
+
   }
 
   getPublications(page, adding = false) {
@@ -69,7 +80,6 @@ export class TimelineComponent implements OnInit {
   }
 
   public noMore = false;
-
   viewMore() {
     if (this.publications.length == this.total_publications) {
       this.noMore = true;
@@ -86,5 +96,29 @@ export class TimelineComponent implements OnInit {
   refresh(){
     this.getPublications(1);
     this.noMore = false;
+  }
+
+  public publicationImageShowing: string;
+
+  showImage(pub_id){
+    this.publicationImageShowing = pub_id;
+  }
+
+  public publicationForRemoval = "";
+  removePublication() {
+    if(this.publicationForRemoval != ""){
+      this.publicationService.removePublication(this.token, this.publicationForRemoval).subscribe(
+        response => {
+          this.refresh();
+        },
+        error => {
+          console.log(error)
+        }
+      );
+    }
+  }
+
+  preparePublicationForRemoval(_id: string) {
+    this.publicationForRemoval = _id;
   }
 }

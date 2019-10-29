@@ -42,12 +42,52 @@ function getFollowingUsers(req, res) {
     Follow.find({user: userId}).populate({path: "followed"}).paginate(page, itemsPerPage, (err, follows, total) => {
         if (err) return res.status(500).send({message: "Error al traer los usuarios que sigue..."});
         if (!follows) return res.status(404).send({message: "No has seguido a nadie!"});
-        return res.status(200).send({
-            total: total,
-            pages: Math.ceil(total / itemsPerPage),
-            follows
-        });
+
+        followUsersIds(userId).then(
+            (value) => {
+                return res.status(200).send({
+                    total: total,
+                    pages: Math.ceil(total / itemsPerPage),
+                    follows,
+                    users_following: value.following_clean,
+                    users_follow_me: value.followed_clean
+                });
+            });
     });
+}
+
+async function followUsersIds(user_id) {
+
+    //cuando hago el exec(), las cosas que se devuelven en el callback => (error, follows), por ejemplo, van en un pipe a: follows -> then((value)) y error -> catch((error))
+    var following = await Follow.find({"user": user_id}).select({
+        "_id": 0,
+        "__v": 0,
+        "user": 0
+    }).exec().then((follow) => {return follow}).catch((err) => {return handleError(err)});
+
+    //cuando hago el exec(), las cosas que se devuelven en el callback => (error, follows), por ejemplo, van en un pipe a: follows -> then((value)) y error -> catch((error))
+    var followed = await Follow.find({"followed": user_id}).select({
+        "_id": 0,
+        "__v": 0,
+        "followed": 0
+    }).exec().then((follow) => {return follow}).catch((err) => {return handleError(err)});
+
+//procesar following ids
+    var following_clean = [];
+    //if(following){
+    following.forEach((follow) => {
+        following_clean.push(follow.followed);
+    });
+    //}
+
+//procesar followed ids
+    var followed_clean = [];
+    //if(followed){
+    followed.forEach((follow) => {
+        followed_clean.push(follow.user);
+    });
+    //}
+    return {following_clean, followed_clean};
 }
 
 function getFollowedUsers(req, res){
@@ -64,11 +104,16 @@ function getFollowedUsers(req, res){
     Follow.find({followed:userId}).populate("user").paginate(page, itemsPerPage, (err, follows, total) => {
         if(err)return res.status(500).send({message: "Error al traer los usuarios que sigue..."});
         if(!follows)return res.status(404).send({message: "No te sigue ningún usuario!"});
-        return res.status(200).send({
-            total: total,
-            pages: Math.ceil(total/itemsPerPage),
-            follows
-        });
+        followUsersIds(userId).then(
+            (value) => {
+                return res.status(200).send({
+                    total: total,
+                    pages: Math.ceil(total / itemsPerPage),
+                    follows,
+                    users_following: value.following_clean,
+                    users_follow_me: value.followed_clean
+                });
+            });
     });
 }
 
@@ -85,6 +130,8 @@ function getFollows(req, res){
         return res.status(200).send({follows});
     });
 }
+
+
 module.exports = {
 	saveFollow,
     deleteFollow,

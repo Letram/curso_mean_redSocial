@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c2f03c1-5460-4b34-b921-219a5bdd83b9" name="Default" comment="publications and timeline implemented.">
-      <change afterPath="$PROJECT_DIR$/api/uploads/users/WaVeqMjYCuCBD7LydHZgZHb4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/user-profile/user-profile.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/user-profile/user-profile.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/user-profile/user-profile.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/user-profile/user-profile.component.ts" afterDir="false" />
+    <list default="true" id="2c2f03c1-5460-4b34-b921-219a5bdd83b9" name="Default" comment="publications implemented. some fixes in the backend as well. Sidebar enhanced and some more components created.">
+      <change afterPath="$PROJECT_DIR$/api/uploads/publications/1Ictp9JfOKlLNFbxSmVsOip7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/uploads/publications/QpSFUHXHBkgpMbpBKuX1GJGR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/followers/followers.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/followers/followers.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/followers/followers.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/followers/followers.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/users-i-follow/users-i-follow.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/users-i-follow/users-i-follow.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/users-i-follow/users-i-follow.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/users-i-follow/users-i-follow.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/controllers/follow.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/follow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/controllers/publication.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/publication.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/publication.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/publication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/publication-list/publication-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/publication-list/publication-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/publication-list/publication-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/publication-list/publication-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/timeline/timeline.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/timeline/timeline.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/timeline/timeline.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/timeline/timeline.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/timeline/timeline.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/timeline/timeline.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/publication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/publication.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/upload.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/upload.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/user-profile/user-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/user-profile/user-profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/follow.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/follow.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/app.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.routing.ts" afterDir="false" />
     </list>
@@ -103,7 +105,8 @@
       <workItem from="1571818974987" duration="12446000" />
       <workItem from="1571904513194" duration="17356000" />
       <workItem from="1571986765260" duration="17310000" />
-      <workItem from="1572263591872" duration="11703000" />
+      <workItem from="1572263591872" duration="11849000" />
+      <workItem from="1572336022360" duration="12338000" />
     </task>
     <task id="LOCAL-00001" summary="Publication controller done">
       <created>1571062219646</created>
@@ -161,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572006662926</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="publications implemented. some fixes in the backend as well. Sidebar enhanced and some more components created.">
+      <created>1572275436162</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1572275436162</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +200,7 @@
     <MESSAGE value="people component started. file upload service implemented." />
     <MESSAGE value="follows service implemented." />
     <MESSAGE value="publications and timeline implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="publications and timeline implemented." />
+    <MESSAGE value="publications implemented. some fixes in the backend as well. Sidebar enhanced and some more components created." />
+    <option name="LAST_COMMIT_MESSAGE" value="publications implemented. some fixes in the backend as well. Sidebar enhanced and some more components created." />
   </component>
 </project>

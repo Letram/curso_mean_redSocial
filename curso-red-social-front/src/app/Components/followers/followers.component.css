@@ -1,0 +1,5 @@
+.img-avatar{
+  height: 6em;
+  width: 6em;
+  object-fit: cover;
+}
