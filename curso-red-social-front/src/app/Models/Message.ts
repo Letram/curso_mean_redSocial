@@ -3,7 +3,7 @@ export class Message {
     public _id: string,
     public text: string,
     public viewed: string,
-    public createdAt: string,
+    public created_at: string,
     public emmiter: string,
     public receiver: string
   ) {}

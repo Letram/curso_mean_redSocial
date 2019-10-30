@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-3  bg-alizarin h-100 pr-0">
+    <h3>{{title}}</h3>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['received']" [routerLinkActive]="['active']">Received messages</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['sent']" [routerLinkActive]="['active']">Sent messages</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['send']" [routerLinkActive]="['active']">Send message</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>

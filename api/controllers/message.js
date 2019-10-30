@@ -32,7 +32,7 @@ function getReceivedMessages(req, res){
     if(req.params.page) page = req.params.page;
     var itemsPerPage = 5;
 
-    Message.find({"receiver": userId}).populate("emmiter receiver", "name surname nick image _id").paginate(page, itemsPerPage, (err, messages, totalMessages) => {
+    Message.find({"receiver": userId}).sort("-created_at").populate("emmiter receiver", "name surname nick image _id").paginate(page, itemsPerPage, (err, messages, totalMessages) => {
         if(err)return res.status(500).send({message: "Error en la peticion para leer todos los mensajes"});
         if(!messages) return res.status(404).send({message: "No hay mensajes disponibles"});
         return res.status(200).send({totalMessages, pages: Math.ceil(totalMessages/itemsPerPage), messages});
@@ -45,10 +45,10 @@ function getSentMessages(req, res){
     if(req.params.page) page = req.params.page;
     var itemsPerPage = 5;
 
-    Message.find({"emmiter": userId}).populate("emmiter receiver", "name surname nick image _id").paginate(page, itemsPerPage, (err, messages, totalMessages) => {
+    Message.find({"emmiter": userId}).sort("-created_at").populate("emmiter receiver", "name surname nick image _id").paginate(page, itemsPerPage, (err, messages, totalMessages) => {
         if(err)return res.status(500).send({message: "Error en la peticion para leer todos los mensajes"});
         if(!messages) return res.status(404).send({message: "No hay mensajes disponibles"});
-        return res.status(200).send({totalMessages, pages: Math.ceil(totalMessages/itemsPerPage), messages});
+        return res.status(200).send({totalMessages, pages: Math.ceil(totalMessages/itemsPerPage), messages, page_size: itemsPerPage});
     });
 }
 

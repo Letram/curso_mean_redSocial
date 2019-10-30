@@ -1,0 +1,27 @@
+<div class="col-auto">
+  <h3>{{title}}</h3>
+  <div class="alert alert-success" *ngIf="status == 1">
+    Message sent! You can see your sent message in <a [routerLink]="['/messages/sent']"> your sent messages</a>.
+  </div>
+
+  <div class="alert alert-danger" *ngIf="status == -1">
+    There was a problem. Try again later.
+  </div>
+  <form #sendMessageForm="ngForm" (ngSubmit)="onSubmit(sendMessageForm)">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="follows_id">For</label>
+      </div>
+      <select class="form-control" id="follows_id" *ngIf="follows" name="recipient" #receiver="ngModel" [(ngModel)]="message.receiver" required>
+        <option *ngFor="let follow of follows" value="{{follow.user._id}}">{{follow.user.name + " " + follow.user.surname + " (" + follow.user.nick + ")"}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="message_text">Content</label>
+      <textarea class="form-control" rows="5" id="message_text" name="content" #content="ngModel"
+                [(ngModel)]="message.text" required></textarea>
+      <span *ngIf="!content.valid && content.touched">This field is required.</span>
+    </div>
+    <input type="submit" value="Send" class="btn btn-success" [disabled]="!sendMessageForm.form.valid">
+  </form>
+</div>

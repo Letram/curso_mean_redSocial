@@ -11,7 +11,7 @@
   color: #bdc3c7;
 }
 
-.active{
+li > a.active{
   border-bottom: 3px solid #bdc3c7;
 }
 
@@ -35,8 +35,9 @@ li > a.active, li > a:hover {
   align-items: center;
 }
 .nav-item.dropdown .avatar{
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
   border-radius: 100px;
   overflow: hidden;
+  object-fit: cover;
 }

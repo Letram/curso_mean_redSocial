@@ -1,0 +1,14 @@
+.active{
+  border-bottom: 3px solid #bdc3c7;
+}
+
+li > a.active, li > a:hover {
+  background: #c0392b;
+}
+.nav-link{
+  color: #ecf0f1;
+}
+
+.bg-alizarin{
+  background: #e74c3c;
+}

@@ -11,6 +11,9 @@
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['/people']" [routerLinkActive]="['active']">People</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/messages']" [routerLinkActive]="['active']">Messages</a>
+      </li>
     </ul>
     <ul class="navbar-nav ml-auto" *ngIf="identity">
       <li class="nav-item avatar">
@@ -18,7 +21,7 @@
       </li>
       <li class="nav-item dropdown">
         <img *ngIf="identity.image" src="{{userService.url + 'get-image-user/' + identity.image}}" alt="Avatar"
-             class="avatar img-thumbnail m-1">
+             class="avatar img-thumbnail">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown">{{identity.name}}</a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" [routerLink]="['/profile', identity._id]" [routerLinkActive]="['active']">Profile</a>
