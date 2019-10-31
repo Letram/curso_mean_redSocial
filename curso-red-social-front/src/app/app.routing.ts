@@ -11,6 +11,7 @@ import {TimelineComponent} from "./Components/timeline/timeline.component";
 import {UserProfileComponent} from "./Components/user-profile/user-profile.component";
 import {UsersIFollowComponent} from "./Components/users-i-follow/users-i-follow.component";
 import {FollowersComponent} from "./Components/followers/followers.component";
+import {UserGuard} from "./Services/user.guard";
 
 // in this case depending on the path of the url a different component will be loaded
 /**
@@ -21,13 +22,13 @@ const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'profile', component: ProfileComponent},
-  {path: 'profile/:id', component: UserProfileComponent},
-  {path: 'people', component: PeopleComponent},
-  {path: 'people/:page', component: PeopleComponent},
-  {path: 'following/:user_id/:page', component: UsersIFollowComponent},
-  {path: 'followers/:user_id/:page', component: FollowersComponent},
-  {path: 'timeline', component:TimelineComponent},
+  {path: 'profile', component: ProfileComponent, canActivate:[UserGuard]},
+  {path: 'profile/:id', component: UserProfileComponent, canActivate:[UserGuard]},
+  {path: 'people', component: PeopleComponent, canActivate:[UserGuard]},
+  {path: 'people/:page', component: PeopleComponent, canActivate:[UserGuard]},
+  {path: 'following/:user_id/:page', component: UsersIFollowComponent, canActivate:[UserGuard]},
+  {path: 'followers/:user_id/:page', component: FollowersComponent, canActivate:[UserGuard]},
+  {path: 'timeline', component:TimelineComponent, canActivate:[UserGuard]},
   {path: '**', component: HomeComponent}
 ];
 

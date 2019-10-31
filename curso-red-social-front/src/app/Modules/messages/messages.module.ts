@@ -11,6 +11,10 @@ import {MessageRoutingModule} from './message-routing.module';
 //other modules
 import {MomentModule} from "ngx-moment";
 
+//my services
+import {UserService} from "../../Services/user.service";
+import {UserGuard} from "../../Services/user.guard";
+
 @NgModule({
   declarations: [
     MainComponent,
@@ -33,7 +37,10 @@ import {MomentModule} from "ngx-moment";
   ],
 
   //here we can add the services used in our module.
-  providers: []
+  providers: [
+    UserService,
+    UserGuard
+  ]
 })
 export class MessagesModule {
 }

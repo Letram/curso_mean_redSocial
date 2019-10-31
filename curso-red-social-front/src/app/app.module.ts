@@ -25,6 +25,10 @@ import {MomentModule} from "ngx-moment";
 //my modules
 import {MessagesModule} from "./Modules/messages/messages.module";
 
+//my services
+import {UserService} from "./Services/user.service";
+import {UserGuard} from "./Services/user.guard";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +53,9 @@ import {MessagesModule} from "./Modules/messages/messages.module";
     MessagesModule
   ],
   providers: [
-    appRoutingProviders
+    appRoutingProviders,
+    UserService,
+    UserGuard
   ],
   bootstrap: [AppComponent]
 })
