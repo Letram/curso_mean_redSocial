@@ -1,0 +1,25 @@
+import {Component, OnInit} from '@angular/core';
+import {LoaderService} from "../../Services/loader.service";
+
+@Component({
+  selector: 'app-loader',
+  templateUrl: './loader.component.html',
+  styleUrls: ['./loader.component.css'],
+  providers: [LoaderService]
+})
+export class LoaderComponent implements OnInit {
+
+  public loading: boolean;
+  constructor(private loaderService: LoaderService) {
+    this.loaderService.isLoading.subscribe(
+      v => {
+        console.log(v);
+        this.loading = v;
+      }
+    );
+  }
+
+  ngOnInit() {
+  }
+
+}

@@ -17,7 +17,6 @@
     </ul>
     <ul class="navbar-nav ml-auto" *ngIf="identity">
       <li class="nav-item avatar">
-
       </li>
       <li class="nav-item dropdown">
         <img *ngIf="identity.image" src="{{userService.url + 'get-image-user/' + identity.image}}" alt="Avatar"
@@ -39,8 +38,7 @@
         <a class="nav-link" [routerLink]="['/register']" [routerLinkActive]="['active']">Register</a>
       </li>
     </ul>
-
   </div>
 </nav>
-<!-- instead of loading components we laod the router -->
+<!-- instead of loading components we load the router -->
 <router-outlet></router-outlet>

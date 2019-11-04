@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c2f03c1-5460-4b34-b921-219a5bdd83b9" name="Default" comment="messages template implemented. Send messages done.">
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/user.guard.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/user.guard.ts" afterDir="false" />
+    <list default="true" id="2c2f03c1-5460-4b34-b921-219a5bdd83b9" name="Default" comment="guard path done.">
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/loader/loader.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/loader/loader.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/loader/loader.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/loader/loader.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Helpers/loader.interceptor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/loader.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Services/loader.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/curso-red-social-front/src/assets/images/04de2e31234507.564a1d23645bf.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Modules/messages/message-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Modules/messages/message-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Modules/messages/messages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Modules/messages/messages.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Modules/messages/received-messages/received-messages.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Modules/messages/received-messages/received-messages.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Modules/messages/received-messages/received-messages.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Modules/messages/received-messages/received-messages.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Modules/messages/received-messages/received-messages.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Modules/messages/received-messages/received-messages.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Modules/messages/sent-messages/sent-messages.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Modules/messages/sent-messages/sent-messages.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/followers/followers.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/followers/followers.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/people/people.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/publication-list/publication-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/publication-list/publication-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/sidebar/sidebar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/timeline/timeline.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/timeline/timeline.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/user-profile/user-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/user-profile/user-profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/users-i-follow/users-i-follow.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/Components/users-i-follow/users-i-follow.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/app/app.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/app/app.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso-red-social-front/src/assets/default_avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/curso-red-social-front/src/assets/images/default_avatar.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +61,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Cursos\curso_mean_redSocial\curso-red-social-front\src\assets\images" />
       <recent name="C:\Cursos\curso_mean_redSocial\curso-red-social-front\src\app\Modules\messages" />
       <recent name="C:\Cursos\curso_mean_redSocial\curso-red-social-front\src\assets" />
       <recent name="C:\Cursos\curso_mean_redSocial\api\controllers" />
@@ -97,7 +106,8 @@
       <workItem from="1572263591872" duration="11849000" />
       <workItem from="1572336022360" duration="12405000" />
       <workItem from="1572421549439" duration="11786000" />
-      <workItem from="1572532435443" duration="1448000" />
+      <workItem from="1572532435443" duration="1566000" />
+      <workItem from="1572856442949" duration="1858000" />
     </task>
     <task id="LOCAL-00001" summary="Publication controller done">
       <created>1571062219646</created>
@@ -176,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572435575581</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="guard path done.">
+      <created>1572533988623</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1572533988623</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +225,7 @@
     <MESSAGE value="publications implemented. some fixes in the backend as well. Sidebar enhanced and some more components created." />
     <MESSAGE value="followers and people user follows implemented." />
     <MESSAGE value="messages template implemented. Send messages done." />
-    <option name="LAST_COMMIT_MESSAGE" value="messages template implemented. Send messages done." />
+    <MESSAGE value="guard path done." />
+    <option name="LAST_COMMIT_MESSAGE" value="guard path done." />
   </component>
 </project>

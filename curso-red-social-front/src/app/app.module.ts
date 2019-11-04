@@ -16,11 +16,13 @@ import {PublicationListComponent} from './Components/publication-list/publicatio
 import {UserProfileComponent} from './Components/user-profile/user-profile.component';
 import {UsersIFollowComponent} from './Components/users-i-follow/users-i-follow.component';
 import {FollowersComponent} from './Components/followers/followers.component';
+import { LoaderComponent } from './Components/loader/loader.component';
 
 // Other modules
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
 import {MomentModule} from "ngx-moment";
+import {HTTP_INTERCEPTORS, HttpClient} from "@angular/common/http";
 
 //my modules
 import {MessagesModule} from "./Modules/messages/messages.module";
@@ -28,6 +30,8 @@ import {MessagesModule} from "./Modules/messages/messages.module";
 //my services
 import {UserService} from "./Services/user.service";
 import {UserGuard} from "./Services/user.guard";
+import {LoaderService} from "./Services/loader.service";
+import{LoaderInterceptor} from "./Helpers/loader.interceptor";
 
 @NgModule({
   declarations: [
@@ -42,7 +46,8 @@ import {UserGuard} from "./Services/user.guard";
     PublicationListComponent,
     UserProfileComponent,
     UsersIFollowComponent,
-    FollowersComponent
+    FollowersComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,9 @@ import {UserGuard} from "./Services/user.guard";
   providers: [
     appRoutingProviders,
     UserService,
-    UserGuard
+    UserGuard,
+    LoaderService,
+    {provide: HTTP_INTERCEPTORS, useClass:LoaderInterceptor, multi:true}
   ],
   bootstrap: [AppComponent]
 })

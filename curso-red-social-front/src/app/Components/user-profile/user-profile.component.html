@@ -6,7 +6,7 @@
         <div class="col-4 d-flex justify-content-center align-items-center flex-column">
           <img src="{{userService.url + 'get-image-user/' + user.image}}" alt="avatar" class="img-avatar rounded-circle"
                *ngIf="user.image">
-          <img src="../../../assets/default_avatar.png" alt="avatar" class="img-avatar rounded-circle"
+          <img src="../../../assets/images/default_avatar.png" alt="avatar" class="img-avatar rounded-circle"
                *ngIf="!user.image">
           <button class="btn btn-primary m-1 btn-block" *ngIf="user._id != identity._id && !is_followed_by_me" (click)="followUser(user._id)">
             Follow
